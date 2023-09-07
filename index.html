@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <title>Сalculator</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="root">
+        <div class="calculator">
+          <p class="heading-h1">Калькулятор стоимости автомобиля</p>
+          <form class="form" name="myForm" novalidate>
+            <div class="form__firm">
+              <label>
+                Марка автомобиля:
+                <select name="firmCar" required class="firmCar">
+                  <option value="">Выберите марку автомобиля</option>
+                  <option value="Renault">Renault</option>
+                  <option value="Opel">Opel</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Jaguar">Jaguar</option>
+                </select>
+              </label>
+            </div>
+            <div class="form__model">
+              <label>
+                Модель автомобиля:
+                <select name="modelCar" class="modelCar" disabled>
+                  <option value="" >Выберите модель автомобиля</option>
+                </select>
+              </label>
+            </div>
+            <div class="form__fuel">
+              <label>Тип топлива:<br>
+              <label><input type="radio" name="fuel" value="petrol" checked/> бензин</label>
+              <br />
+              <label> <input type="radio" name="fuel" value="diesel"/> дизель</label>
+              <br />
+              <label> <input type="radio" name="fuel" value="gas"/> газ</label>
+              <br />
+              <label> <input type="radio" name="fuel" value="electricity"/> электричество</label></label>
+            </div>
+            <div class="form__engine">
+              <label>Объем двигателя (от 1.1 до 3.5 литров):
+                <input name="engine" type="number" required min="1.1" max="3.5" step="0.1"/>
+              </label>
+            </div>
+            <div class="form__state">
+              <label>Состояние автомобиля:<br>
+              <label><input type="radio" name="state" value="new" checked /> новый</label>
+              <br />
+              <label><input type="radio" name="state" value="used" /> подержанный</label></label>
+            </div>
+            <div class="form__owners">
+              <label>Количество владельцев:<br>
+              <label><input type="radio" name="owners" value="up to 2" checked /> 1-2 владельца</label>
+              <br />
+              <label><input type="radio" name="owners" value="over 3" /> более 3x владельцев</label></label>
+            </div>
+            <div class="form__payment-method">
+              <label>Cпособ оплаты:<br>
+              <label><input type="radio" name="pay" value="card" checked/> карта</label>
+              <br />
+              <label><input type="radio" name="pay" value="cash"/> наличные</label>
+              <br />
+              <label>
+                <input type="radio" name="pay" value="account"/> счёт на юридическое
+                лицо</label></label>
+            </div>
+            <div class="container__price"></div>
+            <div class="form__button">
+              <button type="submit" name="button" class="button__calculate">Рассчитать</button>
+              <button type="submit" name="button" class="button__clear">Сбросить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script src="index.js"></script>
+    </main>
+  </body>
+</html>
